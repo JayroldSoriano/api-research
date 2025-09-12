@@ -1,0 +1,351 @@
+## Uses the Heartland Payment Systems Gateway and GlobalPay. Also offers Postman collections for Partner and Merchant
+https://www.globalpayments.com/developers
+
+
+##  Globalpayments' developer portal:
+https://developer.heartlandpaymentsystems.com/
+
+##  Heartland Payments System Gateway Full Dev guide:
+https://cert.api2.heartlandportico.com/Gateway/PorticoDevGuide/build/PorticoDeveloperGuide
+
+##  Globalpay Postman Collection:  
+The collection includes the REST API for Transaction Processing, Fraud Management, Settlement Reporting, Dispute Management, and more.
+https://developer.globalpay.com/api/postman-collection/overview#
+
+##  Globalpay API References  
+Get API definitions, specifications, and interactive code examples
+https://developer.globalpay.com/api/references-overview
+
+##  Sample API Implementations:
+
+##  1. List Settled Transactions
+Get a list of disputes that affected a merchant's bank account using criteria passed in the query string. Page through the result set to access all records.
+https://developer.globalpay.com/api/825#/List Settled Transactions/getSettledTransactions
+
+## Sample Request:
+curl --compressed -X GET "https://apis.sandbox.globalpay.com/ucp/settlement/transactions?account_name=Settlement_Reporting" \
+-H "Authorization: Bearer DCKbRy6gtN6gWJI2ja0B7e3POtbb" \
+-H "X-GP-Version: 2021-03-22" \
+-H "Accept: application/json" \
+
+## Sample Response:
+{
+    "total_record_count": 1000,
+    "current_page_size": 564,
+    ...,
+    "account_name": "Settlement_Reporting",
+    "filter": {
+        "from_deposit_time_created": "string",
+        "to_deposit_time_created": "string"
+    },
+    "paging": {
+        ...,
+        "order_by": "TIME_CREATED"
+    },
+    "transactions": [
+        {
+            "id": "string",
+            "settlement_transaction_reference": "string",
+            "time_created": "2026-05-03T21:23:39.718Z",
+            "status": "FUNDED",
+            "type": "SALE",
+            "amount": "11099",
+            "currency": "USD",
+            ...,
+            "tax_in_merchant_amount": true,
+            "tax_amount": "string",
+            "merchant_tax_amount": "string",
+           ...
+            "deposit_status": "FUNDED",
+            "deposit_amount": 500,
+            "batch_id": "BAT_234234234",
+            "batch_time_created": "2026-05-03T21:23:39.718Z",
+            "order": {
+                "reference": "INV#88547"
+            },
+            "payment_method": {
+                "entry_mode": "MOTO",
+                "card": {
+                    "brand": "VISA",
+                    "authcode": "string",
+                    "brand_reference": "string",
+                    "masked_number_first6last4": "426397xxxxxx5262",
+                    "settlement_code": "string",
+                    "funding": "DEBIT",
+                    "arn": "string"
+                }
+            },
+            "fees": {
+                "total_amount_decimal": "string",
+                "other_fees_amount_decimal": "string",
+                "fixed_amount_decimal": 129,
+                "tax_amount_decimal": 129,
+                "assessment_total_amount_decimal": "string",
+                "charge_type": "string",
+                "charge_type_description": "string",
+                "exchange_rate": "string",
+                "interchange": {
+                    "total_amount_decimal": "string",
+                    "total_rate": "string",
+                    "program": "string",
+                    "percentage": "string",
+                    "percentage_amount_decimal": "string",
+                    "per_item_flat_amount_decimal": "string",
+                    "per_item_calculated_amount_decimal": "string"
+                },
+                "discount": {
+                    "rate_1_percentage": "string",
+                    "rate_2_percentage": "string",
+                    "total_amount_decimal": "string"
+                },
+                "assessment_1": {
+                    "description": "string",
+                    "percentage": "string",
+                    "amount_decimal": "string"
+                },
+                ...,
+                "assessment_5": {
+                    "description": "string",
+                    "percentage": "string",
+                    "amount_decimal": "string"
+                },
+                "mark_up": {
+                    "dcc_percentage": "string",
+                    "multicurrency_percentage": "string"
+                }
+            },
+            "system": {
+                "mid": "string",
+                "tid": "string",
+                "hierarchy": "string",
+                "name": "string",
+                "dba": "string"
+            }
+        }
+    ],
+    "action": {
+        ...
+        "type": "TRANSACTION_LIST",
+        "result_code": "SUCCESS",
+    }
+}
+
+
+
+##  2.  Get a Transaction Summary Report
+Get an aggregated view of all Transactions across all Payment Methods. 
+https://developer.globalpay.com/api/reports#/Get a Transaction Summary Report/get-reports
+
+
+##  Sample Request
+curl --compressed -X GET "https://apis.sandbox.globalpay.com/ucp/reports?type=TRANSACTION_SUMMARY" \
+-H "Authorization: Bearer Tagh5NXSRTGCrDqGCICnvuOPNAvb" \
+-H "X-GP-Version: 2021-03-22" \
+-H "Accept: application/json" \
+
+##  Sample Response
+{
+    ...
+    "account_name": "Settlement_Reporting",
+    "filter": {
+        "from_time_created": "2022-05-01",
+        "to_time_created": "2023-05-01"
+    },
+    ...
+    "reports": [
+        {
+            "type": "TRANSACTION_SUMMARY",
+            "summary": {
+                "sales": {
+                    "count": 5,
+                    "amount": "100"
+                },
+                "refunds": {
+                    "count": 5,
+                    "amount": "100"
+                }
+            },
+            "payment_method_breakdown": [
+                {
+                    ...
+                    "amount": "100",
+                    "gratuity_amount": "100",
+                    "sales": {
+                        "count": 5,
+                        "amount": "100"
+                    },
+                    "refunds": {
+                        "count": 5,
+                        "amount": "100"
+                    },
+                    "reversals": {
+                        "count": 5,
+                        "amount": "100"
+                    }
+                }
+            ]
+        }
+    ],
+    "action": {
+        ....
+        "type": "REPORT_LIST",
+        "result_code": "SUCCESS",
+        "app_name": "my_lovely_app"
+    }
+}
+
+
+
+
+##  2.  Get a Transaction Summary Report
+Get a list of Monthly Fee Reports from Global Payments. Page through the result set to access all records
+https://developer.globalpay.com/api/825#/Get a list of Monthly Fee Reports/getMonthlyFeeReportist
+
+
+
+##  Sample Request
+curl --compressed -X GET "https://apis.sandbox.globalpay.com/ucp/settlement/reports/monthly-fees?account_name=Settlement_Reporting" \
+-H "Content-type: application/json" \
+-H "X-GP-Version: 2021-03-22" \
+-H "Authorization: Bearer DCKbRy6gtN6gWJI2ja0B7e3POtbb" \
+
+##  Sample Response
+{
+    ...
+    "total_record_count": 1000,
+    "merchant_name": "Sandbox_merchant_2",
+    "filter": {
+        "from_time_created": "2024-07",
+        "to_time_created": "2024-11"
+    },
+    ...
+    "monthly_fees": [
+        {
+            "time_created": "string",
+            "status": "FINALIZED",
+            "amount": "11099",
+            "currency": "USD",
+            "interchange_amount": "11099",
+            "assessment_amount": "11099",
+            "authorization_amount": "11099",
+            "chargeback_amount": "11099",
+            "supplies_amount": "11099",
+            "device_amount": "11099",
+            "discount_amount": "11099",
+            "other_amount": "11099",
+            "transaction_count": 123,
+            "sales": {
+                "count": 123,
+                "amount": "120"
+            },
+            "refunds": {
+                "count": 123,
+                "amount": "120"
+            },
+            "passthrough": {
+                "amount": "120"
+            },
+            "merchant": {
+                "name": "James Mason",
+                "address": {
+                        ...
+                }
+            },
+            "system": {
+                "name": "MERCHANT ABC INC",
+                ...
+            }
+        }
+    ],
+    "action": {
+        "type": "MONTHLY_FEES_LIST",
+        "result_code": "SUCCESS",
+        ...
+    }
+}
+
+
+
+
+##   Get Transactions Within a Batch
+Get the details of all transactions within a given Batch.
+https://developer.globalpay.com/api/batches#/Get Transactions Within a Batch/get-batches-id-transactions
+
+## Sample Request
+curl --compressed -X GET "https://apis.sandbox.globalpay.com/ucp/batches/BAT_855049-899/transactions" \
+-H "Authorization: Bearer DCKbRy6gtN6gWJI2ja0B7e3POtbb" \
+-H "X-GP-Version: 2021-03-22" \
+-H "Accept: application/json" \
+
+## Sample Response
+{
+    "total_record_count": 1000,
+    "batch_transaction_count": 126,
+    "merchant_id": "MER_A6A1EC44522F96630ABEA17A",
+    "merchant_name": "ABC INDUSTRIES",
+    "account_id": "TRA_86920f927028745yt34d077d88beb29b",
+    "account_name": "transaction_processing",
+    "site_reference": "string",
+    "device_reference": "string",
+    "filter": {
+        "batch_id": "BAT_855049-899"
+    },
+    "transactions": [
+        {
+            "id": "TRN_uzFr7t4VOqxdLDI44hHmXIjHtOOE8d",
+            "time_created": "2026-05-03T21:23:39.718Z",
+            "status": "BATCHED",
+            "type": "SALE",
+            "amount": "11099",
+            "tax_amount": "string",
+            "currency": "USD",
+            "gratuity_amount": "11099",
+            "cashback_amount": "11099",
+            "reference": "becf9f3e-4d33-459c-8ed2-0c4affc9555e",
+            "payment_method": {
+                "name": "JANE DOE",
+                "entry_mode": "MOTO",
+                "card": {
+                    "funding": "DEBIT",
+                    "brand": "VISA",
+                    "masked_number_first6last4": "426397xxxxxx5262",
+                    "authcode": "string",
+                    "cvv_result": "MATCHED",
+                    "avs_address": "string",
+                    "avs_address_result": "MATCHED",
+                    "avs_postal_code_result": "MATCHED"
+                }
+            }
+        }
+    ],
+    "action": {
+        "id": "ACT_uzFr7t4VOqxdLDI44hHmXIjHtOOE8d",
+        "type": "BATCH_SINGLE",
+        "time_created": "2021-05-03T21:23:39.718Z",
+        "result_code": "SUCCESS",
+        "app_id": "uzFr7t4VOqxdLDI44hHmXIjHtOOE8d",
+        "app_name": "my_lovely_app"
+    }
+}
+
+
+## Reporting (Heartland System)
+List Transactions 
+Gets a list of transaction summaries between a set of dates and filtered if specified.
+https://developer.heartlandpaymentsystems.com/Documentation/reporting
+
+<?php
+use GlobalPayments\Api\Services\ReportingService;
+
+$dateFormat = 'Y-m-d\TH:i:s.00\Z';
+$dateMinus10 = new \DateTime();
+$dateMinus10->sub(new \DateInterval('P10D'));
+$dateMinus10Utc = gmdate($dateFormat, $dateMinus10->format('U'));
+$nowUtc = gmdate($dateFormat);
+
+$items = ReportingService::findTransactions()
+    ->withStartDate($dateMinus10Utc)
+    ->withEndDate($nowUtc)
+    ->execute();
+
+## 
