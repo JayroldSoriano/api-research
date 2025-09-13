@@ -27,7 +27,7 @@ This document summarizes the availability of **POS System APIs**, focusing on pr
 
 ---
 
-### 4. [Kintoz POS (POS Philippines)] (./POS%20Philippines%20Kintoz)
+### 4. [Kintoz POS (POS Philippines)](./POS%20Philippines%20Kintoz)
 - No public API schema, code samples, or endpoint list.  
 - Demo page available but **no developer resources**.  
 🔗 [Demo Page](https://pos.kintoz.com/home/demo)
