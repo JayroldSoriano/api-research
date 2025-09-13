@@ -14,34 +14,34 @@ This document summarizes the availability of **POS System APIs**, focusing on pr
 
 ---
 
-### 2. Divergent POS(./Divergent%20POS)
+### 2. [Divergent POS](./Divergent%20POS)
 - No publicly available documentation or API implementation.  
 🔗 [Service Page](https://divergentechphil.com/services/fast-pos/)
 
 ---
 
-### 3. UTAK POS(./UTAKPOS)
+### 3. [UTAK POS](./UTAKPOS)
 - No public API schema, code samples, or endpoint list.  
 - Help page exists but **no developer docs** available.  
 🔗 [Help Center](https://utak.io/help)
 
 ---
 
-### 4. Kintoz POS (POS Philippines) (./POS%20Philippines%20Kintoz)
+### 4. [Kintoz POS (POS Philippines)] (./POS%20Philippines%20Kintoz)
 - No public API schema, code samples, or endpoint list.  
 - Demo page available but **no developer resources**.  
 🔗 [Demo Page](https://pos.kintoz.com/home/demo)
 
 ---
 
-### 5. REACH POS Asia (./REACH%20POS%20Asia)
+### 5. [REACH POS Asia](./REACH%20POS%20Asia)
 - Requires **user credentials** to access manuals.  
 - No developer portal or API documentation available.  
 🔗 [User Manual](https://www.reachposasia.com/retail-pos-user-manual)
 
 ---
 
-### 6. Qashier POS (./Qashier)
+### 6. [Qashier POS](./Qashier)
 - Has API Integration page (requires form submission).  
 - Integration docs for **Shopify, WooCommerce, Xero**.  
 🔗 [API Integration](https://qashier.com/ph/api-integration/)  
@@ -51,7 +51,7 @@ This document summarizes the availability of **POS System APIs**, focusing on pr
 
 ---
 
-### 7. OrderPin POS (./OrderPin%20POS)
+### 7. [OrderPin POS](./OrderPin%20POS)
 - Offers demo with **approval wait**.  
 - Mentions aggregator integration (OrderOut) requiring **API key**.  
 - Mentions accounting integration with API + SQL support.  
@@ -61,7 +61,7 @@ This document summarizes the availability of **POS System APIs**, focusing on pr
 
 ---
 
-### 8. Storehub Philippines POS (./StorehubPhilippines)
+### 8. [Storehub Philippines POS](./StorehubPhilippines)
 - API Integration page exists (requires form submission).  
 - Found unofficial **MCP repo** + **Postman workspace** (unverified).  
 🔗 [Integration with Financio](https://care.storehub.com/en/articles/5727084-financio-how-to-integrate-with-storehub)  
@@ -72,7 +72,7 @@ This document summarizes the availability of **POS System APIs**, focusing on pr
 
 ## 🌍 Global & Enterprise POS Providers 
 
-### 9. GlobalPayments POS (./GlobalPayments)
+### 9. [GlobalPayments POS](./GlobalPayments)
 - Uses **Heartland Payment Systems Gateway** + GlobalPay.  
 - Provides **full developer portal**, Postman collections, sample requests.  
 - Example APIs: Get Settled Transactions, Transaction Summary Report, Monthly Fee Reports, Batch Transactions, Reporting.  
