@@ -6,10 +6,11 @@ This document summarizes the availability of **POS System APIs**, focusing on pr
 
 ## 🇵🇭 Philippine POS Providers
 
-### 1. Condor POS Solutions
+### 1. [Condor POS Solutions](./Condor%20POS%20Solutions)
 - Mentions API integration, but not on a technical level.  
 - Directs users to find a developer to use their existing implementations.  
 🔗 [Integration Page](https://condorpossolutions.ph/integrate-pos-with-website/)
+
 
 ---
 
