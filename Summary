@@ -1,0 +1,69 @@
+##  Condor POS Solutions
+Mentioned API Integration but not on a technical level.
+Directs users to find a developer to use their existing API implementations.
+https://condorpossolutions.ph/integrate-pos-with-website/
+
+##  Divergent POS
+No publicly available documentation or API implementation.
+https://divergentechphil.com/services/fast-pos/
+
+##  UTAKPOS
+No public API schema, code samples, or endpoint list found.
+Found help page but no mention of API integrations or developer docs.
+https://utak.io/help
+
+##  POS Philippines Kintoz
+No public API schema, code samples, or endpoint list found.
+Demo page available but no developer resources.
+https://pos.kintoz.com/home/demo
+
+## REACH POS Asia
+User credentials required to access user manual.
+No developer portal or API documentation available.
+https://www.reachposasia.com/retail-pos-user-manual
+
+##  Qashier POS
+API Integration page exists, requires filling out a form for details.
+Integration docs available for Shopify, WooCommerce, and Xero.
+
+  https://qashier.com/ph/api-integration/
+  https://support.qashier.com/en/articles/6039667-how-to-integrate-shopify-with-qashier
+  https://support.qashier.com/en/articles/4964720-how-to-integrate-woocommerce-with-qashier
+  https://support.qashier.com/en/articles/7923761-how-to-integrate-xero-with-qashier
+
+##  OrderPin POS
+Offers demo with approval wait.
+Mentions aggregator integration (OrderOut) requiring API key.
+Mentions accounting integration with API and SQL.
+
+  https://www.orderpin.co/pos-software-development/
+  https://helpcenter.orderpin.co/docs/Order-Out-intergration
+  https://helpcenter.orderpin.co/docs/Accounting-integration-Sdzx
+
+##  Storehub Philippines POS
+
+API Integration page exists, requires form submission.
+Found an MCP repo and a Postman workspace but both are unverified.
+
+  https://care.storehub.com/en/articles/5727084-financio-how-to-integrate-with-storehub
+  https://lobechat.com/discover/mcp/je-bobeep-storehub-backoffice-mcp?activeTab=deployment
+  https://www.postman.com/lentasia/storehub-api/overview
+
+##  GlobalPayments POS
+Uses Heartland Payment Systems Gateway and GlobalPay.
+Provides full developer portal, API docs, and Postman collections.
+Includes sample endpoints and request/response structures.
+
+  https://www.globalpayments.com/developers
+  https://developer.heartlandpaymentsystems.com/
+  https://cert.api2.heartlandportico.com/Gateway/PorticoDevGuide/build/PorticoDeveloperGuide
+  https://developer.globalpay.com/api/postman-collection/overview
+  https://developer.globalpay.com/api/references-overview
+
+Example APIs: Get Settled Transactions, Transaction Summary Report, Monthly Fee Reports, Batch Transactions, and Reporting.
+
+##  Overall:
+
+1. Most Philippine POS providers (Condor, Divergent, UTAK, Kintoz, Reach, OrderPin, Storehub) have limited or restricted API visibility, often requiring form submission, credentials, or direct vendor engagement.
+2. Qashier and OrderPin are slightly more open but still gated.
+3. GlobalPayments is the only one with full, public, enterprise-grade API documentation and working sample requests.
