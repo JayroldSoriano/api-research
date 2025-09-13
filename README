@@ -1,0 +1,103 @@
+📌 POS System API Availability – Philippines & Global
+
+This document summarizes the availability of POS System APIs, focusing on providers in the Philippines, alongside global platforms.
+
+🇵🇭 Philippine POS Providers
+1. Condor POS Solutions
+
+Mentions API integration, but not on a technical level.
+
+Directs users to find a developer to use their existing implementations.
+🔗 Integration Page
+
+2. Divergent POS
+
+No publicly available documentation or API implementation.
+🔗 Service Page
+
+3. UTAK POS
+
+No public API schema, code samples, or endpoint list.
+
+Help page exists but no developer docs available.
+🔗 Help Center
+
+4. Kintoz POS (POS Philippines)
+
+No public API schema, code samples, or endpoint list.
+
+Demo page available but no developer resources.
+🔗 Demo Page
+
+5. REACH POS Asia
+
+Requires user credentials to access manuals.
+
+No developer portal or API documentation available.
+🔗 User Manual
+
+6. Qashier POS
+
+Has API Integration page (requires form submission).
+
+Integration docs for Shopify, WooCommerce, Xero.
+🔗 API Integration
+
+🔗 Shopify Integration
+
+🔗 WooCommerce Integration
+
+🔗 Xero Integration
+
+7. OrderPin POS
+
+Offers demo with approval wait.
+
+Mentions aggregator integration (OrderOut) requiring API key.
+
+Mentions accounting integration with API + SQL support.
+🔗 POS Software Development
+
+🔗 OrderOut Integration
+
+🔗 Accounting Integration
+
+8. Storehub Philippines POS
+
+API Integration page exists (requires form submission).
+
+Found unofficial MCP repo + Postman workspace (unverified).
+🔗 Integration with Financio
+
+🔗 MCP Repo (Unverified)
+
+🔗 Postman Workspace (Unverified)
+
+🌍 Global & Enterprise POS Providers
+9. GlobalPayments POS
+
+Uses Heartland Payment Systems Gateway + GlobalPay.
+
+Provides full developer portal, Postman collections, sample requests.
+
+Example APIs: Get Settled Transactions, Transaction Summary Report, Monthly Fee Reports, Batch Transactions, Reporting.
+🔗 GlobalPayments Developer Portal
+
+🔗 Heartland Developer Portal
+
+🔗 Portico Dev Guide
+
+🔗 GlobalPay Postman Collection
+
+🔗 GlobalPay API References
+
+📊 Summary
+
+Most Philippine POS providers (Condor, Divergent, UTAK, Kintoz, REACH, OrderPin, Storehub)
+→ Limited or restricted API visibility. Usually gated behind forms, credentials, or vendor engagement.
+
+Qashier & OrderPin
+→ Slightly more open but still require registration or approval.
+
+GlobalPayments
+→ The only one with full, public, enterprise-grade API docs and working sample endpoints.
